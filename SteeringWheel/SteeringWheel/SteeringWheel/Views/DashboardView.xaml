@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SteeringWheel.Views.DashboardView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Grid.Column="0"
+                HeightRequest="100"
+                Source="{Binding LeftImageSrc, Mode=TwoWay}"
+                WidthRequest="100">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding LeftCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image
+                Grid.Column="1"
+                HeightRequest="100"
+                Source="{Binding BuzzerImageSrc, Mode=TwoWay}"
+                WidthRequest="100">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BuzzerCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image
+                Grid.Column="2"
+                HeightRequest="100"
+                Source="{Binding RightImageSrc, Mode=TwoWay}"
+                WidthRequest="100">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RightCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

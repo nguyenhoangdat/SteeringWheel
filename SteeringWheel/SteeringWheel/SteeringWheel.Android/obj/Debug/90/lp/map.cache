@@ -1,4 +1,11 @@
 FormsViewGroup
+Plugin.BLE
+Plugin.CurrentActivity
+Plugin.Permissions
+Prism.Forms
+SkiaSharp
+SkiaSharp.Views.Android
+SkiaSharp.Views.Forms
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
