@@ -13,9 +13,32 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-
-            <Image
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label
                 Grid.Column="0"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="LEFT"
+                TextColor="Black" />
+            <Label
+                Grid.Column="1"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="BUZZER"
+                TextColor="Black" />
+            <Label
+                Grid.Column="2"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="RIGHT"
+                TextColor="Black" />
+            <Image
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="20"
                 HeightRequest="100"
                 Source="{Binding LeftImageSrc, Mode=TwoWay}"
                 WidthRequest="100">
@@ -24,7 +47,9 @@
                 </Image.GestureRecognizers>
             </Image>
             <Image
+                Grid.Row="1"
                 Grid.Column="1"
+                Margin="20"
                 HeightRequest="100"
                 Source="{Binding BuzzerImageSrc, Mode=TwoWay}"
                 WidthRequest="100">
@@ -33,7 +58,9 @@
                 </Image.GestureRecognizers>
             </Image>
             <Image
+                Grid.Row="1"
                 Grid.Column="2"
+                Margin="20"
                 HeightRequest="100"
                 Source="{Binding RightImageSrc, Mode=TwoWay}"
                 WidthRequest="100">

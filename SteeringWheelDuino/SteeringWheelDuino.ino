@@ -24,21 +24,23 @@ void loop()
      inData.indexOf("$") == 1 && 
      inData.indexOf("%") == 5)
   {
-    //Right
-    if(inData.indexOf("c1") > 0)
+    //Direction
+    if(inData.indexOf("cd") > 0)
     {
       if(inData.charAt(4) == '0')
       {        
-        digitalWrite(left, LOW);
+        digitalWrite(left, HIGH);
+        digitalWrite(right, LOW);
       }
       else
       {
-        digitalWrite(left, HIGH);
+        digitalWrite(left, LOW);
+        digitalWrite(right, HIGH);
       }
     }
 
     //Buzzer
-    if(inData.indexOf("c2") > 0)
+    if(inData.indexOf("cb") > 0)
     {
       if(inData.charAt(4) == '0')
       {        
@@ -47,19 +49,6 @@ void loop()
       else
       {
         digitalWrite(buzzer, HIGH);
-      }
-    }
-
-    //Right
-    if(inData.indexOf("c3") > 0)
-    {
-      if(inData.charAt(4) == '0')
-      {        
-        digitalWrite(right, LOW);
-      }
-      else
-      {
-        digitalWrite(right, HIGH);
       }
     }
   }

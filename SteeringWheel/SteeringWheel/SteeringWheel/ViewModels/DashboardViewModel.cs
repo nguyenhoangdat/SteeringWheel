@@ -78,11 +78,7 @@ namespace SteeringWheel.ViewModels
         {
             Direction = "left";
 
-            await SendDataAsync("c1", "1");
-
-            await Task.Delay(100);
-
-            await SendDataAsync("c3", "0");
+            await SendDataAsync("cd", "0");
         }
 
         private async void BuzzerCommandExecute()
@@ -93,18 +89,14 @@ namespace SteeringWheel.ViewModels
             if (BuzzerStatus)
                 value = "1";
 
-            await SendDataAsync("c2", value);
+            await SendDataAsync("cb", value);
         }
 
         private async void RightCommandExecute()
         {
             Direction = "right";
 
-            await SendDataAsync("c3", "1");
-
-            await Task.Delay(100);
-
-            await SendDataAsync("c1", "0");
+            await SendDataAsync("cd", "1");
         }
 
         private async Task SendDataAsync(string componentCode, string value)
